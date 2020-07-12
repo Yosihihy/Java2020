@@ -1,0 +1,22 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner line = new Scanner(System.in);
+        System.out.println("Wpisz tekst");
+        String text = line.nextLine();
+        int dlugosc = text.length();
+        int spr=0;
+        for(int i=0; i<dlugosc; i++){
+            if(text.charAt(i)!=text.charAt(dlugosc - 1)){
+                System.out.println("False");
+                spr++;
+                break;
+            }
+            dlugosc--;
+        }
+        if(spr==0){
+            System.out.println("True");
+        }
+    }
+}

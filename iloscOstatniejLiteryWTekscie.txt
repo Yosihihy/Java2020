@@ -1,0 +1,18 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Podaj tekst w linii");
+        String liniaTekstu = scan.nextLine();
+        int licznik=0;
+        for(int i=0; i<liniaTekstu.length(); i++){
+            if(liniaTekstu.charAt(i)==liniaTekstu.charAt(liniaTekstu.length() - 1)){
+                licznik++;
+            }
+
+        }
+        System.out.println(licznik);
+    }
+
+}

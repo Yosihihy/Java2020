@@ -1,0 +1,16 @@
+package com.company;
+public class Main {
+    public static class klasa1 {
+        void dlugosc(String slowo) {
+            System.out.println(slowo.length()); 
+        }
+    }
+    public static void main(String[] args) throws Exception {
+        try {
+            klasa1 dlugoscslowa = new klasa1();
+            dlugoscslowa.dlugosc(null); 
+        } catch (NullPointerException wyj){
+            throw new Exception(wyj);
+        }
+    }
+}

@@ -1,0 +1,50 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static class uczen{
+        String imie;
+        String nazwisko;
+        String pesel;
+
+        public void Ustaw_Imie(String name){
+            imie=name;
+        }
+        public void Ustaw_nazwisko(String surname){
+            nazwisko=surname;
+        }
+        public void Ustaw_pesel(String pesel2){
+            pesel=pesel2;
+        }
+    }
+    public static class UczenSzkoly extends uczen{
+        String Nazwa_szkoly;
+        public void Ustaw_szkole(String school){
+            Nazwa_szkoly=school;
+        }
+    }
+    public static class UczenKlasy extends UczenSzkoly{
+        String klasa;
+        public void Ustaw_klase(String klasa2){
+            klasa=klasa2;
+        }
+    }
+    public static void main(String[] args) {
+        UczenKlasy x = new UczenKlasy();
+        Scanner dane = new Scanner(System.in);
+        System.out.println("Imie: ");
+        String imie = dane.nextLine();
+        x.Ustaw_Imie(imie);
+        System.out.println("Nazwisko: ");
+        String nazwisko = dane.nextLine();
+        x.Ustaw_nazwisko(nazwisko);
+        System.out.println("Pesel: ");
+        String pesel = dane.nextLine();
+        x.Ustaw_pesel(pesel);
+        System.out.println("Szkoła: ");
+        String szkola = dane.nextLine();
+        x.Ustaw_szkole(szkola);
+        System.out.println("Klasa: ");
+        String klasa = dane.nextLine();
+        x.Ustaw_klase(klasa);
+    }
+}

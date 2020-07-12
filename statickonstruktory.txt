@@ -1,0 +1,40 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static class Ciag {
+        static int n;
+        double wyraz1;
+        double wyraz2;
+        Ciag(double a, double b)
+        {
+            this.wyraz1=a;
+            this.wyraz2=b;
+        }
+        private double roznica(){
+            return  wyraz2-wyraz1;
+        }
+        private double wyrazn(){
+            return wyraz1+((n-1)*roznica());
+        }
+        private double suman(){
+            return ((wyraz1+wyrazn())*n)/2;
+        }
+        public void wynik(){
+        System.out.println("Suma "+n+" wyrazów Twojego ciągu wynosi:" +suman());
+        }
+        static {
+            n=10;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner line = new Scanner(System.in);
+        System.out.println("Podaj I wyraz ciagu arytmetycznego");
+        double a1 = line.nextDouble();
+        System.out.println("Podaj II wyraz ciagu");
+        double a2 = line.nextDouble();
+        Ciag x = new Ciag(a1,a2);
+        x.wynik();
+    }
+}
